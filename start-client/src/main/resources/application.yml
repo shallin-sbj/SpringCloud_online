@@ -4,7 +4,12 @@ spring:
 server:
   port: 8764
 
+
+
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://192.168.101.110:8520/eureka/
+      defaultZone: http://192.168.1.110:8520/eureka/
+feign:
+  hystrix:
+    enabled: true
