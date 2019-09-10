@@ -7,8 +7,32 @@
     <groupId>com.scl.online</groupId>
     <artifactId>springcloud-online</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <properties>
-        <main.basedir>${basedir}/..</main.basedir>
-    </properties>
+    <packaging>pom</packaging>
     
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>eureka-client</module>
+        <module>eureka-feign-client</module>
+        <module>eureka-ribbon-client</module>
+        <module>eureka-monitor-client</module>
+        <module>zuul-client</module>
+    </modules>
 </project>
