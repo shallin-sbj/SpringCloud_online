@@ -7,4 +7,4 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://192.168.1.110:8520/eureka/
+      defaultZone: http://admin:admin123@eureka.sulin.online:8520/eureka/
