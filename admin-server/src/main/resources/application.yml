@@ -1,0 +1,33 @@
+#endpoints:
+#  actuator:
+#    enabled: true
+#    sensitive: false
+#  beans:
+#    enabled: true
+#    sensitive: false
+#  health:
+#    enabled: true
+#    sensitive: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin123@eureka.sulin.online:8520/eureka/
+  instance:
+    metadata-map:
+      user:
+        name: admin
+        password: 123456
+logging:
+  file: logs/boot-admin-sample.log
+#management:
+#  security:
+#    enabled: false
+server:
+  port: 5001
+spring:
+  application:
+    name: service-admin
+  boot:
+    admin:
+      routes:
+        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream
