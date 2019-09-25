@@ -51,16 +51,16 @@
             <version>2.1.2.RELEASE</version>
         </dependency>
 
+        <!-- 网关依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zuul</artifactId>
             <version>1.4.7.RELEASE</version>
         </dependency>
-
+        <!-- 链路追踪 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zipkin</artifactId>
-            <!--<version>RELEASE</version>-->
         </dependency>
 
     </dependencies>
