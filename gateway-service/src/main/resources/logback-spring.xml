@@ -5,8 +5,8 @@ See here for more details: http://gordondickens.com/wordpress/2013/03/27/sawing-
 
     <contextName>EurekaServce</contextName>
 
-    <property name="LOG_HOME" value="/logdata/user-service"/>
-    <property name="MODULE_NAME" value="userservice"/>
+    <property name="LOG_HOME" value="/logdata/gatewayservice"/>
+    <property name="MODULE_NAME" value="gatewayservice"/>
 
     <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
         <resetJUL>true</resetJUL>

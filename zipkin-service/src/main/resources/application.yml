@@ -3,12 +3,12 @@ eureka:
     serviceUrl:
       defaultZone: http://admin:admin123@eureka.sulin.online:8520/eureka/
 management:
-  main:
-    allow-bean-definition-overriding: true
   metrics:
     web:
       server:
         auto-time-requests: false
+
+
 server:
   port: 9411
 spring:

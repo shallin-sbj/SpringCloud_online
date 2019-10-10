@@ -1,0 +1,1 @@
+java -server -Xms128m -Xmx256m -XX:SurvivorRatio=8 -XX:+UseParallelGC -XX:+DisableExplicitGC  -jar  user-service-0.0.1-SNAPSHOT.jar  > /dev/null 2>&1 &

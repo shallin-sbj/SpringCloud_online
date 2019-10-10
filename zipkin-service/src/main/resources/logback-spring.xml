@@ -3,10 +3,10 @@
 See here for more details: http://gordondickens.com/wordpress/2013/03/27/sawing-through-the-java-loggers/ -->
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
 
-    <contextName>EurekaServce</contextName>
+    <contextName>zipkinservice</contextName>
 
-    <property name="LOG_HOME" value="/logdata/zipkin"/>
-    <property name="MODULE_NAME" value="zipkin"/>
+    <property name="LOG_HOME" value="/logdata/zipkin-service"/>
+    <property name="MODULE_NAME" value="zipkinservice"/>
 
     <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
         <resetJUL>true</resetJUL>
