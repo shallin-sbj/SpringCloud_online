@@ -20,7 +20,6 @@
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
         <zipkin-version>2.11.3</zipkin-version>
-        <!--<zipkin-version>2.12.5</zipkin-version>-->
     </properties>
 
     <dependencyManagement>
