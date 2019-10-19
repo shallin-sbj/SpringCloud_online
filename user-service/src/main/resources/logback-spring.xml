@@ -3,7 +3,7 @@
 See here for more details: http://gordondickens.com/wordpress/2013/03/27/sawing-through-the-java-loggers/ -->
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
 
-    <contextName>EurekaServce</contextName>
+    <contextName>userservice</contextName>
 
     <property name="LOG_HOME" value="/logdata/user-service"/>
     <property name="MODULE_NAME" value="userservice"/>
@@ -50,4 +50,7 @@ See here for more details: http://gordondickens.com/wordpress/2013/03/27/sawing-
         <appender-ref ref="SystemLogService"/>
         <appender-ref ref="console"/>
     </root>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+    <jmxConfigurator/>
 </configuration>

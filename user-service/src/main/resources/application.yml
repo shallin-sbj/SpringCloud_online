@@ -13,3 +13,20 @@ spring:
   sleuth:
     sampler:
       percentage: 1.0
+  boot:
+    admin:
+      client:
+        instance:
+          prefer-ip: true
+        url: http://192.168.101.29:5001
+management:
+  endpoints:
+    health:
+      show-details: always
+    web:
+      exposure:
+        base-path: /
+        include: '*'
+
+logging:
+  file: "/logdata/user-service/userservice_run.log"

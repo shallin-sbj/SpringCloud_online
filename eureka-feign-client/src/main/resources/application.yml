@@ -1,6 +1,8 @@
 spring:
   application:
     name: eureka-feign-client
+  zipkin:
+    base-url: http://localhost:9411
 server:
   port: 8765
 
@@ -8,6 +10,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://admin:admin123@eureka.sulin.online:8520/eureka/
+#      defaultZone: http://192.168.101.213:8889/eureka/
 feign:
   hystrix:
     enabled: true
