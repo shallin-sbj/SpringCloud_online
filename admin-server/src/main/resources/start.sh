@@ -1,0 +1,1 @@
+java -server -Xms128m -Xmx256m -XX:SurvivorRatio=8 -XX:+UseParallelGC -XX:+DisableExplicitGC  -jar admin-server-V1.0.0 > /dev/null 2>&1 &

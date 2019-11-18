@@ -1,0 +1,33 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8520/eureka/
+  eureka:
+    instance:
+      lease-renewal-interval-in-seconds: 10
+#      metadata-map:
+#        user.name: admin
+#        user.password: xy123456
+
+server:
+  port: 8522
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: admin-service
+  security:
+    user:
+      name: admin
+      password: 123456
+    enabled: false
+    basic:
+      enabled: false
+  boot:
+    admin:
+      routes:
+        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream,loggers,auditevents
+
+logging:
+  file: /logdata/adminserver/adminserver__running.log

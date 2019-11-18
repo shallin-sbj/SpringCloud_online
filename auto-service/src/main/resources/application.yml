@@ -1,0 +1,32 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8520/eureka/
+
+spring:
+  application:
+    name: service-auth
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://192.168.1.99:3306/spring-cloud-auth?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    url: jdbc:mysql://192.168.101.218:6666/spring-cloud-auth?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: 123456
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+    database-platform: org.hibernate.dialect.MySQLDialect
+server:
+  context-path: /uaa
+  port: 5000
+
+security:
+  oauth2:
+    resource:
+      filter-order: 3
+#  basic:
+#    enabled: false

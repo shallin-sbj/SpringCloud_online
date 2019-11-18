@@ -1,0 +1,1 @@
+java -server -Xms128m -Xmx256m -XX:SurvivorRatio=8 -XX:+UseParallelGC -XX:+DisableExplicitGC  -jar turbine-service-V1.0.0.jar > /dev/null 2>&1 &
