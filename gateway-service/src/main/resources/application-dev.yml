@@ -1,0 +1,55 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8520/eureka/
+
+server:
+  port: 5000
+spring:
+  application:
+    name: gateway-service
+  sleuth:
+    sampler:
+      percentage: 1.0
+  zipkin:
+    base-url: http://localhost:9411
+    boot:
+      admin:
+        client:
+          instance:
+          # prefer-ip: true
+          url: http://192.168.101.29:5001
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
+
+zuul:
+  routes:
+    api-a:
+      path: /user-api/**
+      serviceId: user-service
+
+    api-b:
+      path: /V0/**
+      serviceId: eureka-client-one
+
+    api-c:
+      path: /V/**
+      serviceId: eureka-client
+    api-d:
+      path: /v1/**
+      serviceId: regionLocation_service
+
+management:
+  endpoints:
+    health:
+    show-details: always
+    web:
+    exposure:
+    base-path: /
+    include: '*'
+
+logging:
+  file: "/logdata/gatewayservice/gatewayservice_run.log"

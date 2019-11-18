@@ -1,10 +1,11 @@
 turbine-service
+用户聚合整个项目的熔断面板
 
 ###1. 启动端口号为8521
 启动后浏览：http://localhost:8521/hystrix/
-输入监听的信息：http://localhost:8764/turbine.stream
-###2. 添加新的项目是，请在application.yml
-中添加新的项目
+输入监听的信息：http://localhost:8521/turbine.stream
+###2. 添加新的项目时
+请在application-*.yml 中添加新的项目
 
 
 ###3. 新的项目接入

@@ -1,0 +1,32 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8520/eureka/
+server:
+  port: 8521
+spring:
+  application:
+    name: turbine-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+turbine:
+#  app-config: service-hi,service-lucy
+  app-config: eureka-client,eureka-client-one,gateway-service,eureka-feign-client,operatorInstructions
+  aggregator:
+    clusterConfig: default
+  clusterNameExpression: new String("default")
+  combine-host: true
+  instanceUrlSuffix:
+    default: actuator/hystrix.stream
+
