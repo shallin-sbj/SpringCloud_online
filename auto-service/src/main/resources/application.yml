@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://admin:admin123@eureka.sulin.online:8520/eureka/
+      defaultZone: http://localhost:8520/eureka/
 
 spring:
   application:
