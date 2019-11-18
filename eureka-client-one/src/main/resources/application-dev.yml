@@ -1,25 +1,28 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://admin:admin123@eureka.sulin.online:8520/eureka/
+      defaultZone: http://localhost:8520/eureka/
 server:
   port: 8764
 spring:
   application:
-    name: eureka-client-two
+    name: eureka-client-one
   boot:
     admin:
       client:
         instance:
-        #          prefer-ip: true
+        # prefer-ip: true
         url: http://localhost:5001
+  zipkin:
+    base-url: http://localhost:9411
+
 logging:
   file: "logs/eureka-client-one.log"
 
 management:
   endpoints:
     health:
-      show-details: always
+      show-details: always   ## 是否采集全部的健康状态日志
     web:
       exposure:
         base-path: /

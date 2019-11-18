@@ -9,7 +9,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://admin:admin123@eureka.sulin.online:8520/eureka/
+      defaultZone: http://localhost:8520/eureka/
 #      defaultZone: http://192.168.101.213:8889/eureka/
 feign:
   hystrix:
